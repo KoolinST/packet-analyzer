@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Ignore build directory and all contents
+/build/
+
+# macOS system files
+.DS_Store
+
+# VSCode config files
+.vscode/
