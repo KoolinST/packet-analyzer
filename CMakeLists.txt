@@ -13,7 +13,8 @@ link_directories(${PCAP_LIBRARY_DIRS})
 
 add_executable(PacketAnalyzer
     src/main.cpp
-    src/PacketCapture.cpp
+    src/PacketParser.cpp
+    src/PacketSniffer.cpp
 )
 
 target_include_directories(PacketAnalyzer PRIVATE include)
