@@ -1,5 +1,6 @@
 #include "PacketSniffer.hpp"
 #include "PacketParser.hpp"
+#include "Logger.hpp"
 
 #include <iostream>
 #include <cstring>
@@ -24,5 +25,7 @@ void PacketSniffer::start() {
 }
 
 void PacketSniffer::packetHandler(u_char* userData, const struct pcap_pkthdr* pkthdr, const u_char* packet) {
+    std::string logEntity = PacketParser::parse(packet, *pkthdr);
+    std::cout << logEntity << std::endl;
     PacketParser::parse(packet, *pkthdr);
 }

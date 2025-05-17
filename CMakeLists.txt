@@ -15,6 +15,7 @@ add_executable(PacketAnalyzer
     src/main.cpp
     src/PacketParser.cpp
     src/PacketSniffer.cpp
+    src/Logger.cpp
 )
 
 target_include_directories(PacketAnalyzer PRIVATE include)

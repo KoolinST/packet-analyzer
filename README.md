@@ -10,6 +10,9 @@ A simple real-time network packet analyzer built in C++ using **libpcap**.
   - `PacketCapture` – handles low-level capture loop in saved directory
   - `PacketParser` – decodes packet contents
   - `PacketSniffer` – integrates parser with capture logic
+  - `Logger` - Asynchronously logs parsed output with timestamps
+- Logs every captured packet with timestamp and protocol details
+- Thread-safe logger writing to file asynchronously
 - Command-line usage: `sudo ./PacketAnalyzer <interface>`
 - Replace <interface> with your actual network interface name.
 
@@ -31,4 +34,5 @@ make
 - libpcap
 - C++17+
 - cmake 4.0.2+
+- POSIX-compatible system (Linux/macOS)
 # Enjoy using it

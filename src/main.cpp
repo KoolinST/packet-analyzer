@@ -1,4 +1,5 @@
 #include "PacketSniffer.hpp"
+#include "Logger.hpp"
 #include <iostream>
 
 int main(int argc, char* argv[]) {
@@ -6,6 +7,7 @@ int main(int argc, char* argv[]) {
         std::cerr << "Usage: " << argv[0] << " <network interface>\n";
         return 1;
     }
+    Logger::getInstance().setLogFile("packet_log.txt");
 
     PacketSniffer sniffer(argv[1]);
     sniffer.start();
