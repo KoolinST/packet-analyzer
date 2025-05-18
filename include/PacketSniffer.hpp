@@ -7,7 +7,9 @@
 class PacketSniffer {
 public:
     explicit PacketSniffer(const std::string& interface);
+    bool open();
     void start();
+    bool setFilter(const std::string& filterExpression);
 
 private:
     std::string interfaceName;
